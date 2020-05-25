@@ -1,0 +1,41 @@
+//TestBench for D Latch ( Parameterized) 
+module tb_latch;
+   // Declare variables that can be used to drive values to the design
+   reg [7:0] d;  
+   reg en;
+   reg rst;
+   reg [2:0] delay;
+   reg [1:0] delay2;
+   wire [7:0] q ; 
+  // wire [7:0] qbar ; 
+   integer i;
+ 
+   // Instantiate design and connect design ports with TB signals
+   D_Latch  instance1 ( d , en , rst , q ) ; 
+ 
+   // This initial block forms the stimulus to test the design
+   
+   initial
+   begin
+			en = 0 ; 
+      $monitor ("[%0t] Enable=%0b D=%0b Q=%0b ", $time, en, d, q,);
+			#5
+				d = 8'b10101010 ; 
+				en = 0 ; 
+			#3 
+				d = 8'b11110101 ; 
+				en = 1 ; 
+			#10 
+				d = 8'b11010101 ; 
+				en = 0 ; 
+			#12
+				d = 8'b11110000 ; 
+				en = 1 ; 
+	end 
+
+	always @(*) 
+		begin 
+		 #50 
+			$finish ; 
+		end 
+endmodule

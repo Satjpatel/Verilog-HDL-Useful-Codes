@@ -1,0 +1,33 @@
+//N bit D Latch ( Transparent Latch) 
+
+//Designed by Sat Patel 
+
+module D_Latch 
+	#( parameter length_of_latch = 8 ) 
+	( 
+		input [length_of_latch-1 : 0] D ,  //Data to be latched 
+		input enable , // if enable = 1 , Latch is transparent ( whatever data comes in D, is sent straight to output) 
+						// else if enable = 0 , the last data is "latched" stored. 
+		input reset, //Resets the outputs to 0 
+		
+		output reg [length_of_latch-1 : 0] Q  , //Output of the latch 
+		output reg [length_of_latch-1 : 0] Q_bar  //Complemented output 
+	) ; 
+	
+	always @(*) 
+		begin 
+			if (reset) 
+				begin 
+					Q <= 0 ; 
+					Q_bar <= 0 ; 
+				end 
+			
+			else if ( enable == 1) 
+				begin 
+					Q <= D ; 
+					Q_bar <=  ( D^8'b11111111 ) ; 
+				end 
+			
+		end 
+
+endmodule  
