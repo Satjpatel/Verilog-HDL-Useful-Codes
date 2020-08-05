@@ -1,0 +1,40 @@
+#! /usr/bin/vvp
+:ivl_version "10.1 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x55799e39c640 .scope module, "addertesting" "addertesting" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "A"
+    .port_info 1 /INPUT 1 "B"
+    .port_info 2 /INPUT 1 "C"
+    .port_info 3 /OUTPUT 1 "S"
+    .port_info 4 /OUTPUT 1 "Cy"
+o0x7ffae8acf018 .functor BUFZ 1, C4<z>; HiZ drive
+o0x7ffae8acf048 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x55799e3bd0e0 .functor XOR 1, o0x7ffae8acf018, o0x7ffae8acf048, C4<0>, C4<0>;
+o0x7ffae8acf078 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x55799e3bd1d0 .functor XOR 1, L_0x55799e3bd0e0, o0x7ffae8acf078, C4<0>, C4<0>;
+L_0x55799e3bd270 .functor AND 1, o0x7ffae8acf018, o0x7ffae8acf048, C4<1>, C4<1>;
+L_0x55799e3bd3b0 .functor AND 1, o0x7ffae8acf048, o0x7ffae8acf078, C4<1>, C4<1>;
+L_0x55799e3bd4a0 .functor OR 1, L_0x55799e3bd270, L_0x55799e3bd3b0, C4<0>, C4<0>;
+L_0x55799e3bd5b0 .functor AND 1, o0x7ffae8acf078, o0x7ffae8acf018, C4<1>, C4<1>;
+L_0x55799e3bd660 .functor OR 1, L_0x55799e3bd4a0, L_0x55799e3bd5b0, C4<0>, C4<0>;
+v0x55799e39c840_0 .net "A", 0 0, o0x7ffae8acf018;  0 drivers
+v0x55799e3bc880_0 .net "B", 0 0, o0x7ffae8acf048;  0 drivers
+v0x55799e3bc940_0 .net "C", 0 0, o0x7ffae8acf078;  0 drivers
+v0x55799e3bca10_0 .net "Cy", 0 0, L_0x55799e3bd660;  1 drivers
+v0x55799e3bcad0_0 .net "S", 0 0, L_0x55799e3bd1d0;  1 drivers
+v0x55799e3bcbe0_0 .net *"_s0", 0 0, L_0x55799e3bd0e0;  1 drivers
+v0x55799e3bccc0_0 .net *"_s10", 0 0, L_0x55799e3bd5b0;  1 drivers
+v0x55799e3bcda0_0 .net *"_s4", 0 0, L_0x55799e3bd270;  1 drivers
+v0x55799e3bce80_0 .net *"_s6", 0 0, L_0x55799e3bd3b0;  1 drivers
+v0x55799e3bcf60_0 .net *"_s8", 0 0, L_0x55799e3bd4a0;  1 drivers
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "addertesting.v";
