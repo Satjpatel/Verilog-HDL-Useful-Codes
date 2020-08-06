@@ -1,0 +1,108 @@
+#! /usr/bin/vvp
+:ivl_version "10.1 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x56537cc4b4e0 .scope module, "TestingadderWithStatusFlag" "TestingadderWithStatusFlag" 2 1;
+ .timescale 0 0;
+v0x56537cc6cb40_0 .net "CY", 0 0, L_0x56537cc6d150;  1 drivers
+v0x56537cc6cc00_0 .net "P", 0 0, L_0x56537cc6d990;  1 drivers
+v0x56537cc6cca0_0 .net "S", 0 0, L_0x56537cc6d770;  1 drivers
+v0x56537cc6cd70_0 .net "V", 0 0, L_0x56537cc6e4a0;  1 drivers
+v0x56537cc6ce40_0 .var "X", 15 0;
+v0x56537cc6cee0_0 .var "Y", 15 0;
+v0x56537cc6cfb0_0 .net "Z", 15 0, L_0x56537cc6d240;  1 drivers
+v0x56537cc6d080_0 .net "ZR", 0 0, L_0x56537cc6d8a0;  1 drivers
+S_0x56537cc4b660 .scope module, "DUT" "adderWithStatusFlags" 2 6, 3 1 0, S_0x56537cc4b4e0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 16 "X"
+    .port_info 1 /INPUT 16 "Y"
+    .port_info 2 /OUTPUT 16 "Z"
+    .port_info 3 /OUTPUT 1 "Sign"
+    .port_info 4 /OUTPUT 1 "Zero"
+    .port_info 5 /OUTPUT 1 "Carry"
+    .port_info 6 /OUTPUT 1 "Parity"
+    .port_info 7 /OUTPUT 1 "Overflow"
+L_0x56537cc496f0 .functor AND 1, L_0x56537cc6da80, L_0x56537cc6db20, C4<1>, C4<1>;
+L_0x56537cc49760 .functor NOT 1, L_0x56537cc6dc70, C4<0>, C4<0>, C4<0>;
+L_0x56537cc6dd60 .functor AND 1, L_0x56537cc496f0, L_0x56537cc49760, C4<1>, C4<1>;
+L_0x56537cc6df80 .functor NOT 1, L_0x56537cc6de70, C4<0>, C4<0>, C4<0>;
+L_0x56537cc6e120 .functor NOT 1, L_0x56537cc6dff0, C4<0>, C4<0>, C4<0>;
+L_0x56537cc6e190 .functor AND 1, L_0x56537cc6df80, L_0x56537cc6e120, C4<1>, C4<1>;
+L_0x56537cc6df10 .functor AND 1, L_0x56537cc6e190, L_0x56537cc6e2e0, C4<1>, C4<1>;
+L_0x56537cc6e4a0 .functor OR 1, L_0x56537cc6dd60, L_0x56537cc6df10, C4<0>, C4<0>;
+v0x56537cc4b8b0_0 .net "Carry", 0 0, L_0x56537cc6d150;  alias, 1 drivers
+v0x56537cc6b4b0_0 .net "Overflow", 0 0, L_0x56537cc6e4a0;  alias, 1 drivers
+v0x56537cc6b570_0 .net "Parity", 0 0, L_0x56537cc6d990;  alias, 1 drivers
+v0x56537cc6b610_0 .net "Sign", 0 0, L_0x56537cc6d770;  alias, 1 drivers
+v0x56537cc6b6d0_0 .net "X", 15 0, v0x56537cc6ce40_0;  1 drivers
+v0x56537cc6b800_0 .net "Y", 15 0, v0x56537cc6cee0_0;  1 drivers
+v0x56537cc6b8e0_0 .net "Z", 15 0, L_0x56537cc6d240;  alias, 1 drivers
+v0x56537cc6b9c0_0 .net "Zero", 0 0, L_0x56537cc6d8a0;  alias, 1 drivers
+L_0x7fc21466a060 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x56537cc6ba80_0 .net *"_s10", 0 0, L_0x7fc21466a060;  1 drivers
+v0x56537cc6bb60_0 .net *"_s11", 16 0, L_0x56537cc6d630;  1 drivers
+v0x56537cc6bc40_0 .net *"_s20", 0 0, L_0x56537cc6da80;  1 drivers
+v0x56537cc6bd20_0 .net *"_s22", 0 0, L_0x56537cc6db20;  1 drivers
+v0x56537cc6be00_0 .net *"_s23", 0 0, L_0x56537cc496f0;  1 drivers
+v0x56537cc6bee0_0 .net *"_s26", 0 0, L_0x56537cc6dc70;  1 drivers
+v0x56537cc6bfc0_0 .net *"_s27", 0 0, L_0x56537cc49760;  1 drivers
+v0x56537cc6c0a0_0 .net *"_s29", 0 0, L_0x56537cc6dd60;  1 drivers
+v0x56537cc6c180_0 .net *"_s3", 16 0, L_0x56537cc6d380;  1 drivers
+v0x56537cc6c260_0 .net *"_s32", 0 0, L_0x56537cc6de70;  1 drivers
+v0x56537cc6c340_0 .net *"_s33", 0 0, L_0x56537cc6df80;  1 drivers
+v0x56537cc6c420_0 .net *"_s36", 0 0, L_0x56537cc6dff0;  1 drivers
+v0x56537cc6c500_0 .net *"_s37", 0 0, L_0x56537cc6e120;  1 drivers
+v0x56537cc6c5e0_0 .net *"_s39", 0 0, L_0x56537cc6e190;  1 drivers
+v0x56537cc6c6c0_0 .net *"_s42", 0 0, L_0x56537cc6e2e0;  1 drivers
+v0x56537cc6c7a0_0 .net *"_s43", 0 0, L_0x56537cc6df10;  1 drivers
+L_0x7fc21466a018 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x56537cc6c880_0 .net *"_s6", 0 0, L_0x7fc21466a018;  1 drivers
+v0x56537cc6c960_0 .net *"_s7", 16 0, L_0x56537cc6d4c0;  1 drivers
+L_0x56537cc6d150 .part L_0x56537cc6d630, 16, 1;
+L_0x56537cc6d240 .part L_0x56537cc6d630, 0, 16;
+L_0x56537cc6d380 .concat [ 16 1 0 0], v0x56537cc6ce40_0, L_0x7fc21466a018;
+L_0x56537cc6d4c0 .concat [ 16 1 0 0], v0x56537cc6cee0_0, L_0x7fc21466a060;
+L_0x56537cc6d630 .arith/sum 17, L_0x56537cc6d380, L_0x56537cc6d4c0;
+L_0x56537cc6d770 .part L_0x56537cc6d240, 15, 1;
+L_0x56537cc6d8a0 .reduce/nor L_0x56537cc6d240;
+L_0x56537cc6d990 .reduce/xnor L_0x56537cc6d240;
+L_0x56537cc6da80 .part v0x56537cc6ce40_0, 15, 1;
+L_0x56537cc6db20 .part v0x56537cc6cee0_0, 15, 1;
+L_0x56537cc6dc70 .part L_0x56537cc6d240, 15, 1;
+L_0x56537cc6de70 .part v0x56537cc6ce40_0, 15, 1;
+L_0x56537cc6dff0 .part v0x56537cc6cee0_0, 15, 1;
+L_0x56537cc6e2e0 .part L_0x56537cc6d240, 15, 1;
+    .scope S_0x56537cc4b4e0;
+T_0 ;
+    %vpi_call 2 10 "$dumpfile", "adder.vcd" {0 0 0};
+    %vpi_call 2 11 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x56537cc4b4e0 {0 0 0};
+    %vpi_call 2 12 "$monitor", $time, "X = %h , Y = %h, Z = %h, S = %b, CY = %b, P = %b, V = %b", v0x56537cc6ce40_0, v0x56537cc6cee0_0, v0x56537cc6cfb0_0, v0x56537cc6cca0_0, v0x56537cc6d080_0, v0x56537cc6cb40_0, v0x56537cc6cc00_0, v0x56537cc6cd70_0 {0 0 0};
+    %delay 5, 0;
+    %pushi/vec4 36863, 0, 16;
+    %store/vec4 v0x56537cc6ce40_0, 0, 16;
+    %pushi/vec4 32768, 0, 16;
+    %store/vec4 v0x56537cc6cee0_0, 0, 16;
+    %delay 5, 0;
+    %pushi/vec4 65534, 0, 16;
+    %store/vec4 v0x56537cc6ce40_0, 0, 16;
+    %pushi/vec4 2, 0, 16;
+    %store/vec4 v0x56537cc6cee0_0, 0, 16;
+    %delay 5, 0;
+    %pushi/vec4 43690, 0, 16;
+    %store/vec4 v0x56537cc6ce40_0, 0, 16;
+    %pushi/vec4 21845, 0, 16;
+    %store/vec4 v0x56537cc6cee0_0, 0, 16;
+    %delay 5, 0;
+    %vpi_call 2 20 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "TestingadderWithStatusFlags.v";
+    "adderWithStatusFlags.v";
