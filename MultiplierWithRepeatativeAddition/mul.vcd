@@ -1,0 +1,123 @@
+$date
+	Fri Aug  7 10:46:13 2020
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module MUL_test $end
+$var wire 1 ! ldP $end
+$var wire 1 " ldB $end
+$var wire 1 # ldA $end
+$var wire 1 $ eqz $end
+$var wire 1 % done $end
+$var wire 1 & decB $end
+$var wire 1 ' clrP $end
+$var reg 1 ( clk $end
+$var reg 16 ) data_in [15:0] $end
+$var reg 1 * start $end
+$scope module CON $end
+$var wire 1 ( clk $end
+$var wire 1 * start $end
+$var wire 1 $ eqz $end
+$var reg 1 ' clrP $end
+$var reg 1 & decB $end
+$var reg 1 % done $end
+$var reg 1 # ldA $end
+$var reg 1 " ldB $end
+$var reg 1 ! ldP $end
+$var reg 3 + state [2:0] $end
+$upscope $end
+$scope module DP $end
+$var wire 16 , Bus [15:0] $end
+$var wire 1 ( clk $end
+$var wire 1 ' clrP $end
+$var wire 16 - data_in [15:0] $end
+$var wire 1 & decB $end
+$var wire 1 # ldA $end
+$var wire 1 " ldB $end
+$var wire 1 ! ldP $end
+$var wire 1 $ eqz $end
+$var wire 16 . Z [15:0] $end
+$var wire 16 / Y [15:0] $end
+$var wire 16 0 X [15:0] $end
+$var wire 16 1 Bout [15:0] $end
+$scope module A $end
+$var wire 1 ( clk $end
+$var wire 16 2 din [15:0] $end
+$var wire 1 # ld $end
+$var reg 16 3 dout [15:0] $end
+$upscope $end
+$scope module AD $end
+$var wire 16 4 in1 [15:0] $end
+$var wire 16 5 in2 [15:0] $end
+$var reg 16 6 out [15:0] $end
+$upscope $end
+$scope module B $end
+$var wire 1 ( clk $end
+$var wire 1 & dec $end
+$var wire 16 7 din [15:0] $end
+$var wire 1 " ld $end
+$var reg 16 8 dout [15:0] $end
+$upscope $end
+$scope module COMP $end
+$var wire 16 9 data [15:0] $end
+$var wire 1 $ eqz $end
+$upscope $end
+$scope module P $end
+$var wire 1 ( clk $end
+$var wire 1 ' clr $end
+$var wire 16 : din [15:0] $end
+$var wire 1 ! ld $end
+$var reg 16 ; dout [15:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx ;
+bx :
+bx 9
+bx 8
+bz 7
+bx 6
+bx 5
+bx 4
+bx 3
+bz 2
+bx 1
+bx 0
+bx /
+bx .
+bx -
+bz ,
+bx +
+x*
+bx )
+0(
+x'
+x&
+x%
+x$
+x#
+x"
+x!
+$end
+#3
+1*
+#5
+b0 +
+1(
+#6
+0&
+0'
+0!
+0"
+0#
+#17
+b101 )
+b101 -
+#503
