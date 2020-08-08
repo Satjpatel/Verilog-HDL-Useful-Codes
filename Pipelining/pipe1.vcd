@@ -1,0 +1,139 @@
+$date
+	Sat Aug  8 16:42:05 2020
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module pipeline_tb $end
+$var wire 10 ! F [9:0] $end
+$var reg 10 " A [9:0] $end
+$var reg 10 # B [9:0] $end
+$var reg 10 $ C [9:0] $end
+$var reg 10 % D [9:0] $end
+$var reg 1 & clk $end
+$scope module MyPipeDUT $end
+$var wire 10 ' A [9:0] $end
+$var wire 10 ( B [9:0] $end
+$var wire 10 ) C [9:0] $end
+$var wire 10 * D [9:0] $end
+$var wire 10 + F [9:0] $end
+$var wire 1 & clk $end
+$var reg 10 , F_Out [9:0] $end
+$var reg 10 - L12_D [9:0] $end
+$var reg 10 . L12_x1 [9:0] $end
+$var reg 10 / L12_x2 [9:0] $end
+$var reg 10 0 L23_D [9:0] $end
+$var reg 10 1 L23_x3 [9:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx 1
+bx 0
+bx /
+bx .
+bx -
+bx ,
+bx +
+bx *
+bx )
+bx (
+bx '
+0&
+bx %
+bx $
+bx #
+bx "
+bx !
+$end
+#5
+b0 %
+b0 *
+b0 $
+b0 )
+b0 #
+b0 (
+b0 "
+b0 '
+#10
+b0 -
+b0 /
+b0 .
+1&
+#15
+b100 %
+b100 *
+b11 $
+b11 )
+b10 #
+b10 (
+b1 "
+b1 '
+#20
+0&
+#25
+b10 %
+b10 *
+b101 $
+b101 )
+b11 #
+b11 (
+b0 "
+b0 '
+#30
+b0 0
+b0 1
+b10 -
+b11 /
+b11 .
+1&
+#35
+b1 %
+b1 *
+b1 $
+b1 )
+b0 #
+b0 (
+b1 "
+b1 '
+#40
+0&
+#45
+b10 %
+b10 *
+b10 $
+b10 )
+b10 #
+b10 (
+b10 "
+b10 '
+#50
+b0 /
+b100 .
+b10 0
+b110 1
+b0 !
+b0 +
+b0 ,
+1&
+#60
+0&
+#70
+b1100 !
+b1100 +
+b1100 ,
+b100 1
+1&
+#80
+0&
+#90
+b1000 !
+b1000 +
+b1000 ,
+1&
+#100
+0&
