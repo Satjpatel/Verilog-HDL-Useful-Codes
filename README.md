@@ -3,7 +3,7 @@ Useful Verilog HDL Codes which can be used in multiple design systems.
 
 For Icarus Verilog, these are some useful commands. 
 
-For creating file : geany file1.v 
+For creating file : geany file1.v  ( I use the Geany Editor) 
 Close the file after the work is done 
 
 For compiling : iverilog file1.v -o outputfile1
