@@ -6,14 +6,20 @@ For Icarus Verilog, these are some useful commands.
 For creating file : geany file1.v  ( I use the Geany Editor) 
 Close the file after the work is done 
 
-For compiling : iverilog file1.v -o outputfile1
+For compiling :
+                          iverilog file1.v -o outputfile1
+
                         vpp outputfile1 
                         
-For simulation : iverilog -o mysim file1.v file1_tb.v 
+For simulation : 
+                         iverilog -o mysim file1.v file1_tb.v 
+
                           vvp mysim 
                           
 For Waveform generation : In the testbench, write this 
-                      module test1_tb.v 
+                     
+                     
+                     module test1_tb.v 
                        .
                        .
                        .
@@ -22,4 +28,5 @@ For Waveform generation : In the testbench, write this
                         
                       endmodule 
                       
-        then go this : gtkwave file1waveform.vcd 
+                      
+      then go this : gtkwave file1waveform.vcd 
