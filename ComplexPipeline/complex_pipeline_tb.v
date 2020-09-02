@@ -53,7 +53,17 @@ initial
 		addr = 127 ; 
 		
 		#60 for ( k = 125 ; k < 131 ; k = k + 1 ) 
+			begin 
 			$display ("Mem[%3d] = %3d", k, DUT.mem[k] ) ; 
+			end 
+			
+	end
+	
+initial 
+	begin 
+	$dumpfile("WaveformFile.vcd") ; 
+	$dumpvars(0, complex_pipeline_tb) ; 
+	$monitor("Time # %d, F = %d", $time, Z ) ; 
 	end 
 	
 endmodule 
