@@ -35,53 +35,54 @@ always @ (posedge KEY0)
 always @ (*) 
 	begin 
 		NS = State ; 
-		case(State)
-		State_0: begin 
-					if(SW2) 
-						NS = State_1 ; 
-					else if(SW1) 
-						NS = State_3; 
-					else 
-						NS = State ; 
-				end 
 		
-		State_1: begin 
-					if(SW1) 
-						NS = State_2 ; 
-					else 
+			case(State)
+			State_0: begin 
+						if(SW2) 
+							NS = State_1 ; 
+						else if(SW1) 
+							NS = State_3; 
+						else 
+							NS = State ; 
+					end 
+			
+			State_1: begin 
+						if(SW1) 
+							NS = State_2 ; 
+						else 
+							NS = State ; 
+					end 
+			
+			State_2: begin 
+						if(SW1) 
+							NS = State_1 ; 
+						else if(SW4) 
+							NS = State_3 ; 
+						else 
+							NS = State ; 
+					 end 
+			State_3 : begin 
+						if(SW1) 
+							NS = State_1 ; 
+						else if(SW3) 
+							NS = State_4 ; 
+						else 
+							NS = State ; 
+					 end 
+			State_4:  begin 
+						if(SW0) 
+							NS = State_0 ; 
+						else if(SW1) 
+							NS = State_1 ; 
+						else 
+							NS = State ; 
+					end 
+			default: begin 
 						NS = State ; 
-				end 
+					 end 
 		
-		State_2: begin 
-					if(SW1) 
-						NS = State_1 ; 
-					else if(SW4) 
-						NS = State_3 ; 
-					else 
-						NS = State ; 
-				 end 
-		State_3 : begin 
-					if(SW1) 
-						NS = State_1 ; 
-					else if(SW3) 
-						NS = State_4 ; 
-					else 
-						NS = State ; 
-				 end 
-		State_4:  begin 
-					if(SW0) 
-						NS = State_0 ; 
-					else if(SW1) 
-						NS = State_1 ; 
-					else 
-					    NS = State ; 
-				end 
-		default: begin 
-					NS = State ; 
-				 end 
-				 
-		endcase 
-		
+			endcase 
+	
 	end 
 	
 //Outputs -- 2 bit 'Z' 
