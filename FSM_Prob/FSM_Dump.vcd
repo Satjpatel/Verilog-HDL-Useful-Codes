@@ -1,0 +1,139 @@
+$date
+	Wed Oct 28 09:02:07 2020
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module FSM_tb $end
+$var wire 2 ! Z [1:0] $end
+$var wire 3 " State [2:0] $end
+$var reg 1 # KEY0 $end
+$var reg 1 $ SW0 $end
+$var reg 1 % SW1 $end
+$var reg 1 & SW2 $end
+$var reg 1 ' SW3 $end
+$var reg 1 ( SW4 $end
+$scope module DUT $end
+$var wire 1 # KEY0 $end
+$var wire 1 $ SW0 $end
+$var wire 1 % SW1 $end
+$var wire 1 & SW2 $end
+$var wire 1 ' SW3 $end
+$var wire 1 ( SW4 $end
+$var reg 3 ) NS [2:0] $end
+$var reg 3 * State [2:0] $end
+$var reg 2 + Z [1:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx +
+bx *
+bx )
+x(
+x'
+x&
+x%
+x$
+0#
+bx "
+bx !
+$end
+#5
+1#
+#10
+0#
+#15
+b1 !
+b1 +
+b0 )
+b0 "
+b0 *
+1#
+1$
+#20
+0#
+#25
+b10 !
+b10 +
+b1 "
+b1 *
+b1 )
+1#
+1&
+0$
+#30
+0#
+#35
+b0 !
+b0 +
+b10 "
+b10 *
+b1 )
+1#
+1%
+0&
+#40
+0#
+#45
+b10 !
+b10 +
+b10 )
+b1 "
+b1 *
+1#
+#50
+0#
+#55
+b0 !
+b0 +
+b1 )
+b10 "
+b10 *
+1#
+#60
+0#
+#65
+b11 "
+b11 *
+b11 )
+1#
+1(
+0%
+#70
+0#
+#75
+b11 !
+b11 +
+b100 "
+b100 *
+b100 )
+1#
+1'
+0(
+#80
+0#
+#85
+b10 !
+b10 +
+b1 "
+b1 *
+b10 )
+1#
+1%
+0'
+#90
+0#
+#95
+b0 !
+b0 +
+b1 )
+b10 "
+b10 *
+1#
+#100
+0#
