@@ -30,3 +30,11 @@ For Waveform generation : In the testbench, write this
                       
                       
       then go this : gtkwave file1waveform.vcd 
+   
+ ## Cool Tip: 
+                                Whenever you are writing a code in Verilog, to avoid confusion where to assign wires and registers, always prefix your code with "r_" or "w_". This way, you will always assign the register values inside the always block, and wire values always outside the always block. 
+                                
+                                Eg:                              
+                                          reg  r_LED_1    = 1'b0;
+                                          reg  r_Switch_1 = 1'b0;
+                                          wire w_Switch_1;
